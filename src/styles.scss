@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+@charset "utf-8";
+
+// Import a Google Font
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+
+// Set your brand colors
+$purple: #a59ad7;
+$pink: #fe76c2;
+$blue: #37c7f2;
+
+$red-light: #fff3f3;
+
+$light: #fafcff;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$primary: $purple;
+$link: $blue;
+
+// Update some of Bulma's component variables
+$body-background-color: $light;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-background-color: #f3f5fa;
+$input-shadow: none;
+
+// Card component
+$card-header-color: $purple;
+$card-header-padding: 0.75rem 1.5rem;
+$card-header-shadow: none;
+$card-content-padding: 0 1.5rem 1rem 1.5rem;
+
+@import "../node_modules/bulma/bulma.sass";
+
+// Global styles
+
+html {
+  font-size: 1.125rem;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+
+  i.fas {
+    color: $purple;
+  }
+}
