@@ -1,0 +1,28 @@
+@import "../../../styles.scss";
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 31.25rem;
+  margin: auto;
+  padding-top: 3.125rem;
+
+  .save {
+    background: $green;
+
+    &:hover {
+      background: $green-dark;
+    }
+
+    &[disabled] {
+      background: $green-dark;
+      color: $grey;
+    }
+  }
+
+  .ng-invalid {
+    input[required] {
+      border: 2px solid $error;
+    }
+  }
+}

@@ -8,12 +8,10 @@
     </p>
   </div>
   <div class="notes-list">
-    <app-note-card [title]="'title'" [body]="'lorem ipsum'"></app-note-card>
-    <app-note-card [title]="'title'"
-      [body]="'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit'">
-    </app-note-card>
-    <app-note-card [title]="'title'"
-      [body]="'Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout'">
+    <app-note-card *ngFor="let note of notes; index as i" [link]="i" [title]="note.title" [body]="note.body"
+      (delete)="deleteNote(i)">
     </app-note-card>
   </div>
+
+  <button class="button is-fullwidth" routerLink="new">+ Add</button>
 </div>

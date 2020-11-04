@@ -1,3 +1,5 @@
+import { NotesService } from './../shared/notes.service';
+import { Note } from './../shared/note.model';
 import {
   Component,
   OnInit,
@@ -6,6 +8,8 @@ import {
   Renderer2,
   Input,
   AfterViewInit,
+  Output,
+  EventEmitter,
 } from '@angular/core';
 
 @Component({
@@ -16,6 +20,10 @@ import {
 export class NoteCardComponent implements OnInit, AfterViewInit {
   @Input() title: string;
   @Input() body: string;
+  @Input() link: string;
+
+  @Output('delete') deleteEvent: EventEmitter<void> = new EventEmitter<void>();
+
   @ViewChild('truncator') truncator: ElementRef<HTMLElement>;
   @ViewChild('cardContent') cardContent: ElementRef<HTMLElement>;
 
@@ -31,5 +39,9 @@ export class NoteCardComponent implements OnInit, AfterViewInit {
     this.cardContent.nativeElement.scrollHeight > viewableHeight
       ? this.renderer.setStyle(this.truncator.nativeElement, 'display', 'block')
       : this.renderer.setStyle(this.truncator.nativeElement, 'display', 'none');
+  }
+
+  close(): void {
+    this.deleteEvent.emit();
   }
 }

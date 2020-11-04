@@ -3,6 +3,9 @@
 .card {
   margin: 1rem auto;
   transition: box-shadow 0.2s ease-out;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
   &:hover {
     cursor: pointer;
@@ -23,7 +26,6 @@
     position: relative;
     max-height: 5.5rem;
     overflow: hidden;
-    // min-height: 3rem;
 
     .content {
       margin-bottom: 0;
@@ -40,5 +42,10 @@
       rgba(#ffffff, 0.8) 50%,
       #ffffff 100%
     );
+  }
+
+  .card-header-icon {
+    height: 3.37rem;
+    width: 1.68rem;
   }
 }
