@@ -16,10 +16,10 @@
 
     <div class="field is-grouped is-grouped-right">
       <div class="control">
-        <button class="button is-link is-light" (click)="cancel()">Cancel</button>
+        <button class="button is-link is-light" (click)="cancel()">{{cancelButton}}</button>
       </div>
       <div class="control">
-        <button class="button is-link save" [disabled]="!noteForm.valid">Save</button>
+        <button class="button is-link save" [disabled]="!noteForm.valid">{{saveButton}}</button>
       </div>
     </div>
   </form>

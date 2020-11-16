@@ -99,6 +99,7 @@ import {
 export class NotesListComponent implements OnInit {
   notes: Note[] = new Array<Note>();
   filteredNotes: Note[] = new Array<Note>();
+  addButton = '+ Add';
 
   constructor(private notesService: NotesService) {}
 

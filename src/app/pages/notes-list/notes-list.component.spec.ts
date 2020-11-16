@@ -37,6 +37,10 @@ describe('NotesListComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it(`should have a button add`, () => {
+    expect(component.addButton).toEqual('+ Add');
+  });
+
   it('should delete a note', () => {
     mockResponse.forEach((note) => service.add(note));
     component.deleteNote(1);

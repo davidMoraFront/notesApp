@@ -13,6 +13,8 @@ export class NoteDetailsComponent implements OnInit {
   note: Note;
   noteId: number;
   new: boolean;
+  cancelButton = 'Cancel';
+  saveButton = 'Save';
 
   constructor(
     private notesService: NotesService,

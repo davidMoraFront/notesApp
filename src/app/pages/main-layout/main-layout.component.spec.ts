@@ -23,4 +23,8 @@ describe('MainLayoutComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should have as title 'notesApp'`, () => {
+    expect(component.title).toEqual('notesApp');
+  });
 });
